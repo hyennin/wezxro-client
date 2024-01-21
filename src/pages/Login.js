@@ -12,7 +12,7 @@ const Login = () => {
   return (
     <Container>
       <Logo>
-        <img className="logoImg" src="assets/logo.png" alt="we:zxro"/>
+        <img className="logoImg" src="/logo.png" alt="we:zxro"/>
       </Logo>
       <Title>WEZXRO에 오신 것을 환영합니다.</Title>
       <Sub>서비스 이용을 위해 로그인해주세요.</Sub>
