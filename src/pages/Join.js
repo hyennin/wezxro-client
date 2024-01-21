@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { useHistory } from "react-router-dom";
 
-const Login = () => {
+const Join = () => {
   const history = useHistory();
   
   const onSubmitHandler = () => {
@@ -15,19 +15,28 @@ const Login = () => {
         <img className="logoImg" src="assets/logo.png" alt="we:zxro"/>
       </Logo>
       <Title>WEZXRO에 오신 것을 환영합니다.</Title>
-      <Sub>서비스 이용을 위해 로그인해주세요.</Sub>
+      <Sub>서비스 이용을 위해 회원으로 가입해주세요.</Sub>
       <Form onSubmit={onSubmitHandler}>
+        <Label>이름</Label>
+        <Input type="text" placeholder="이름을 입력해주세요."/>
         <Label>이메일</Label>
-        <Id type="email" placeholder="이메일을 입력해주세요."/>
+        <Input type="email" placeholder="이메일을 입력해주세요."/>
         <Label>비밀번호</Label>
         <Pw type="password" placeholder="비밀번호를 입력해주세요."/>
+        <Label>비밀번호 확인</Label>
+        <Pw type="password" placeholder="비밀번호를 한 번 더 입력해주세요."/>
+        <Label>추천인 코드(없는 경우 공란)</Label>
+        <Input type="text" placeholder="추천인 코드를 입력해주세요."/>
+        <CheckWrapper>
+          <CheckBox type="checkbox"/>
+          <Tos>이용약관 및 개인정보처리방침</Tos>에 동의합니다.
+        </CheckWrapper>
         <ButtonWrapper>
-          <Button>로그인</Button>
-          <Button>둘러보기</Button>
+          <Button>회원가입</Button>
         </ButtonWrapper>
-        <JoinWrapper>
-          아직 회원이 아니시라면 <Join href="/join">회원가입</Join> 후 이용해주세요.
-        </JoinWrapper>
+        <LoginWrapper>
+          이미 가입하셨다면 바로 <Login href="/login">로그인</Login>해주세요.
+        </LoginWrapper>
       </Form>
     </Container>
   );
@@ -59,13 +68,12 @@ const Sub = styled.div`
 `;
 
 const Form = styled.form`
-  position: relative;
   display: flex;
   flex-direction: column;
-  width: 360px;
-  height: 400px;
+  width: 400px;
+  height: 600px;
   margin: 16px;
-  padding: 32px 16px;
+  padding: 16px;
   border: 1px solid var(--gray02);
   border-radius: 8px;  
 `;
@@ -77,7 +85,7 @@ const Label = styled.label`
   font-size: 13px;
 `;
 
-const Id = styled.input`
+const Input = styled.input`
   height: 41px;
   padding-left: 8px;
   border: 1px solid var(--gray02);
@@ -91,17 +99,35 @@ const Pw = styled.input`
   border-radius: 6px;  
 `;
 
+const CheckWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  margin-top: 24px;
+  color: var(--gray02);
+`;
+
+const CheckBox = styled.input`
+  accent-color: var(--gray02);
+`;
+
+const Tos = styled.a`
+  text-decoration: underline;
+  cursor: pointer;
+`;
+
 const ButtonWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 16px;
-  margin-top: 24px;
+  margin-top: 16px;
 `;
 
 const Button = styled.button`
   width: 100%;
-  height: 48px;
+  height: 54px;
   background-color: var(--gray01);
   border-radius: 6px;
   cursor: pointer;
@@ -112,16 +138,14 @@ const Button = styled.button`
   }
 `;
 
-const JoinWrapper = styled.div`
-  position: absolute;
-  bottom: 24px;
-  margin-top: 16px;
+const LoginWrapper = styled.div`
+  margin: 16px auto;
   color: var(--gray02);
 `;
 
-const Join = styled.a`
+const Login = styled.a`
   text-decoration: underline;
   cursor: pointer;
 `;
 
-export default Login;
+export default Join;

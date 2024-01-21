@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Header from './components/Header';
 import Sidebar from './components/Sidebar';
 import Login from './pages/Login';
+import Join from './pages/Join';
 import Statistics from './pages/Statistics';
 import Order from './pages/Order';
 import AddOrder from './pages/AddOrder';
@@ -16,6 +17,7 @@ const App = () => {
       <AppWrapper>
         <Switch>
           <Route path="/login" component={Login} />
+          <Route path="/join" component={Join} />
           <RouteWrapper>
             <Sidebar />
             <ContentWrapper>
