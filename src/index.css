@@ -38,7 +38,7 @@ p {
 }
 
 a {
-  color: black;
+  color: var(--gray03);
   text-decoration: none;
 }
 
@@ -49,4 +49,8 @@ li {
 button {
   border: 0;
   outline: 0;
+}
+
+input {
+  border: 0;
 }

@@ -72,14 +72,15 @@ const StatusWrapper = styled.div`
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 16px;
+  gap: 24px;
 `;
 
 const OrderWrapper = styled.div`
+  width: 100%;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 16px;
+  gap: 24px;
 `;
 
 export default Statistics;

@@ -12,8 +12,8 @@ const Header = () => {
 
   return (
     <HeaderWrapper>
-			<BiBell size={20}/>
-			<Profile onClick={toggleBtnVisibility}>
+			<BiBell className='notice' size={20}/>
+			<Profile onClick={toggleBtnVisibility} style={isBtnVisible ? { marginRight: '8px' } : {}}>
 				<Info>
 					<Name>밍밍님</Name>
 					<Amount>150000원</Amount>
@@ -42,6 +42,10 @@ const HeaderWrapper = styled.div`
 	align-items: center;
 	column-gap: 16px;
 	border-bottom: 1px solid var(--gray01);
+
+	.notice{
+		cursor: pointer;
+	}
 `;
 
 const Profile = styled.div`
@@ -93,7 +97,8 @@ const ButtonContainer = styled.div`
 	background-color: var(--gray01);
 	border-radius: 6px;
 	border: 1px solid var(--gray01);
-	
+	cursor: pointer;
+
   &:before {
     content: "";
     position: absolute;
@@ -111,6 +116,7 @@ const Button = styled.button`
 	padding: 4px;
 	background-color: var(--gray01);
 	white-space: nowrap;
+	cursor: pointer;
 
 	&:hover{
 		background-color: var(--gray00);

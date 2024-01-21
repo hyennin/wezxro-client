@@ -23,6 +23,7 @@ const CardWrapper = styled.div`
   justify-content: space-between;
   align-items: center;
   width: 363px;
+  min-width: 200px;
   height: 88px;
   padding: 8px 16px;
   border: 1px solid var(--gray01);

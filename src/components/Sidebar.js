@@ -63,7 +63,7 @@ const SidebarWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 174px;
+  width: 248px;
   height: 100%;
   padding: 8px;
   border: 1px solid var(--gray01);
@@ -83,7 +83,7 @@ const MenuItem = styled.div`
   display: flex;
   align-items: center;
   column-gap: 8px;
-  width: 158px;
+  width: 232px;
   margin: 2px 0;
   padding: 10px;
   font-weight: bold;
